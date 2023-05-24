@@ -9,6 +9,7 @@
 #import "OrientationListener.h"
 
 @implementation OrientationListener {
+    UIDeviceOrientation lastDeviceOrientation;
     NSString* lastOrientation;
 }
 
@@ -67,6 +68,9 @@
 - (void)stopOrientationListener {
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     if (@available(iOS 16.0, *)) {
+
+    }
+    else {
         UIDevice *device = [UIDevice currentDevice];
         [device endGeneratingDeviceOrientationNotifications];
     }
