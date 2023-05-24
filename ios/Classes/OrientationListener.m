@@ -19,7 +19,7 @@
         NSArray *array = [[[UIApplication sharedApplication] connectedScenes] allObjects];
         UIWindowScene *scene = (UIWindowScene *)array[0];
         [UIViewController attemptRotationToDeviceOrientation];
-        UIWindowSceneGeometryPreferencesIOS *geometryPreferences = [[UIWindowSceneGeometryPreferencesIOS alloc] initWithInterfaceOrientations:maskOrientation];
+        UIWindowSceneGeometryPreferencesIOS *geometryPreferences = [[UIWindowSceneGeometryPreferencesIOS alloc] initWithInterfaceOrientations:UIInterfaceOrientationMaskPortrait];
         [scene requestGeometryUpdateWithPreferences:geometryPreferences errorHandler:^(NSError * _Nonnull error) {}];
     } else {
         UIDevice *device = [UIDevice currentDevice];
