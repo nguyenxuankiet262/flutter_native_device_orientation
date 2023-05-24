@@ -9,7 +9,6 @@
 #import "OrientationListener.h"
 
 @implementation OrientationListener {
-    UIDeviceOrientation lastDeviceOrientation;
     NSString* lastOrientation;
 }
 
